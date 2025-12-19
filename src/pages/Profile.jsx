@@ -13,12 +13,12 @@ export default function Profile() {
   if (!profile) return <p>Loading...</p>;
 
   return (
-    <div>
-      <h2>Profile</h2>
-      <p><b>Email:</b> {profile.email}</p>
-      <p><b>DSA:</b> {profile.dsaCompleted}/{profile.dsaTotal}</p>
-      <p><b>Mock Score:</b> {profile.mockScore}</p>
-      <p><b>Core Status:</b> {profile.coreStatus}</p>
-    </div>
+      <div>
+        <h2>Profile</h2>
+        <p><b>Email:</b> {profile.email}</p>
+        <p><b>DSA:</b> {profile.dsaCompleted}/{profile.dsaTotal}</p>
+        <p><b>Mock Score:</b> {profile.mockScore}</p>
+        <p><b>Core Status:</b> {profile.coreStatus}</p>
+      </div>
   );
 }

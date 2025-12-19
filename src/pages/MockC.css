@@ -1,0 +1,64 @@
+/* MockC.css */
+.mock-chart-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.mock-chart-container h2 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+.no-data {
+  text-align: center;
+  color: #64748b;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Chart styling */
+.chart-container {
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chart-container {
+    height: 300px;
+  }
+  
+  .mock-chart-container {
+    padding: 1.25rem;
+  }
+  
+  .mock-chart-container h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-container {
+    height: 250px;
+  }
+  
+  .mock-chart-container {
+    padding: 1rem;
+    margin: 0.75rem 0;
+  }
+  
+  .mock-chart-container h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}
