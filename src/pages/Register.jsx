@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../api/api";
-
+import "./register.css"
 export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,30 +27,31 @@ export default function Register() {
   };
 
   return (
-    <form onSubmit={submitlogin}>
-      <h2>Register</h2>
+   <form onSubmit={submitlogin} className="register-form">
+  <h2>Register</h2>
 
-      <div>
-        <label>Email:</label>
-        <input
-          type="email"
-          placeholder="enter email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </div>
+  <div className="form-group">
+    <label>Email:</label>
+    <input
+      type="email"
+      placeholder="enter email"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+    />
+  </div>
 
-      <div>
-        <label>Password:</label>
-        <input
-          type="password"
-          placeholder="enter password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
+  <div className="form-group">
+    <label>Password:</label>
+    <input
+      type="password"
+      placeholder="enter password"
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
+    />
+  </div>
 
-      <button type="submit">Register</button>
-    </form>
+  <button type="submit" className="register-button">Register</button>
+</form>
+
   );
 }

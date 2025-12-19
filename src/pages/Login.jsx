@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import api from "../api/api";
 import "./Login.css";
 
@@ -46,6 +46,9 @@ return (
         />
       </div>
       <button type="submit">Login</button>
+      <div style={{textAlign:"center"}}><p>or</p>
+      <Link to="/register">Register</Link></div>
+      
     </form>
   </div>
   );

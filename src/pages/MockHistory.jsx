@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../api/api";
-
+import "./MockH.css"
 export default function MockHistory() {
 
   const [mocks, setMocks] = useState([]);
@@ -11,19 +11,20 @@ export default function MockHistory() {
       .catch(() => alert("Failed to load mock history"));
   }, []);
 
-  return (
-    <div>
-      <h2>Mock Test History</h2>
+ return (
+  <div className="mock-history-container">
+    <h2>Mock Test History</h2>
 
-      {mocks.length === 0 && <p>No mock tests yet</p>}
+    {mocks.length === 0 && <p className="no-mocks">No mock tests yet</p>}
 
-      <ul>
-        {mocks.map((m, index) => (
-          <li key={index}>
-            Score: {m.score} | Date: {m.takenAt}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+    <ul className="mock-list">
+      {mocks.map((m, index) => (
+        <li key={index} className="mock-item">
+          <span className="mock-score">Score: {m.score}</span>
+          <span className="mock-date">Date: {new Date(m.takenAt).toLocaleDateString()}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 }

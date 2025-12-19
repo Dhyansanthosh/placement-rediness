@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../api/api";
-
+import "./AddMs.css";
 export default function AddMock() {
 
   const [score, setScore] = useState("");
@@ -26,17 +26,20 @@ export default function AddMock() {
   };
 
   return (
-    <form onSubmit={submitMock}>
-      <h2>Add Mock Test Score</h2>
+  <div className="add-mock-container">
+    <form className="mock-form" onSubmit={submitMock}>
+      <h2 className="form-title">Add Mock Test Score</h2>
 
       <input
+        className="mock-input"
         type="number"
         placeholder="Enter score"
         value={score}
         onChange={(e) => setScore(e.target.value)}
       />
 
-      <button type="submit">Save</button>
+      <button className="mock-submit-btn" type="submit">Save</button>
     </form>
-  );
+  </div>
+);
 }
