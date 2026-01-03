@@ -49,7 +49,7 @@ return (
       <div style={{textAlign:"center"}}><p>or</p>
       <Link to="/register">Register</Link></div>
       
-    </form>
+    </form> 
   </div>
   );
 }
